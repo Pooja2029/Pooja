@@ -1,0 +1,5 @@
+package com.book.demo.Repository;
+
+public interface BookLoginRepository {
+
+}

@@ -1,0 +1,38 @@
+package com.spring.day1.Controller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.spring.day1.Model.TrainLoginModel;
+
+import com.spring.day1.Service.TrainLoginService;
+
+
+public class TrainLoginController {
+	public TrainLoginService tser;
+	@PostMapping("/login")
+	
+	public String login(@RequestBody Map<String, String>loginDate)
+	{
+		String uname=loginDate.get("uname");
+		String pwd=loginDate.get("pwd");
+		
+		String result=tser.checkLogin(uname,pwd);   
+		return result;
+	}
+	@PostMapping("/adduser")
+	public TrainLoginModel AddUser(@RequestBody TrainLoginModel train)
+	{
+		return tser.addUser(train);
+		
+	}
+	@GetMapping
+	public List<TrainLoginModel> listAll()
+	{
+		return tser.getUser();
+	}
+

@@ -1,0 +1,5 @@
+package com.educationloan.repository;
+
+public interface UserRepo {
+
+}

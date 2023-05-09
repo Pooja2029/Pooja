@@ -1,0 +1,24 @@
+package com.spring.day1.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.day1.Model.TrainModel;
+public interface Trainrepo extends JpaRepository<TrainModel, Integer> {
+
+	List<TrainModel> fetchStudentsBySourcePrefix(String prefix);
+
+	List<TrainModel> fetchStudentsBySourceSuffix(String suffix);
+
+	List<TrainModel> getStudentsByDestination(String department, String name);
+
+	int deleteStudentByName(String name);
+
+	int updateStudentByName(String department, String name);
+
+	List<TrainModel> fetchStudentByEmail(String email);
+	
+	
+
+}

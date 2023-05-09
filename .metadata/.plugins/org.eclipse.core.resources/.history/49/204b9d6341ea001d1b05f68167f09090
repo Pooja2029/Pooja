@@ -1,0 +1,8 @@
+package com.spring.day1.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.day1.Model.TrainModel;
+public interface Trainrepo extends JpaRepository<TrainModel, Integer> {
+
+}

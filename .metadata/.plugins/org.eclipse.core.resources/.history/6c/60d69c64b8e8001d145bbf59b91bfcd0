@@ -1,0 +1,7 @@
+package com.example.demo.chocolateRepository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface chocoRepositary1 extends JpaRepository<T, ID> {
+
+}
